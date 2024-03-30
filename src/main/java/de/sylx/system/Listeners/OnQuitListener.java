@@ -1,5 +1,6 @@
 package de.sylx.system.Listeners;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,7 +14,9 @@ public class OnQuitListener implements Listener {
 
         e.setQuitMessage("§c" + p.getName() + " hat das Spiel Verlassen der huransohn");
 
-        p.playSound(p.getLocation(), Sound.ITEM_GOAT_HORN_SOUND_0, 1.0f, 1.0f);
+        for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+            onlinePlayer.playSound(onlinePlayer.getLocation(), Sound.ENTITY_VILLAGER_YES, 3.0F, 1.0F);
+        }
 
     }
 }
