@@ -10,6 +10,6 @@ public class OnQuitListener implements Listener {
     public void onQuit(PlayerQuitEvent e) {
         Player p = e.getPlayer();
 
-        p.sendMessage("§e"+p.getName()+" hat das Spiel Verlassen der huransohn");
+        e.setQuitMessage("§c" + p.getName() + " hat das Spiel Verlassen der huransohn");
     }
 }
