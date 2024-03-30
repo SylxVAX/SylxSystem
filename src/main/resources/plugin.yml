@@ -1,0 +1,4 @@
+name: SylxSystem
+version: '${version}'
+main: de.sylx.system.SylxSystem
+api-version: '1.20'
